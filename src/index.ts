@@ -15,7 +15,6 @@ const walkDirectory = async function (
   parenttags,
 ): Promise<TagsData> {
   // Read the directory
-  console.log(dir, parentObjectName, parenttags);
   const list = await fs.readdir(dir);
   for (let i = 0; i < list.length; i++) {
     const fileName = list[i];
