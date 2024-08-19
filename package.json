@@ -1,0 +1,49 @@
+{
+  "name": "dungeon-draft-assets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "cls && npm run build:webpack && copy .\\dist\\dd_object_tagger.js .\\dd_object_tagger.js && npm run build:tagger && npm run prettier && del .\\dd_object_tagger.js",
+    "build:webpack": "webpack",
+    "build:production": "webpack --mode production --env mode=production",
+    "build:tagger": "node dd_object_tagger.js",
+    "prettier": "prettier \"**/*.{js,json,md,ts,dungeondraft_tags}\" --write --list-different --no-error-on-unmatched-pattern",
+    "start": "webpack serve --hot"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "dependencies": {
+    "@types/marked": "^6.0.0",
+    "@types/node": "^22.4.0",
+    "@types/webpack-env": "^1.18.5",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-webpack-plugin": "^4.2.0",
+    "marked": "^14.0.0",
+    "null-loader": "^4.0.1",
+    "path-browserify": "^1.0.1",
+    "prettier": "^3.3.3",
+    "raw-loader": "^4.0.2",
+    "source-map-loader": "^5.0.0",
+    "string-replace-loader": "^3.1.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-import-glob-loader": "^1.6.3"
+  }
+}

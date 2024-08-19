@@ -1,0 +1,8 @@
+{
+  "overrides": [
+    {
+      "files": "*.dungeondraft_tags",
+      "options": { "parser": "json" }
+    }
+  ]
+}

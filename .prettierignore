@@ -1,0 +1,15 @@
+build
+dist
+out
+generated
+coverage
+.github
+*.min.*
+polyfills.*
+*.d.ts
+CHANGELOG.md
+*.hbs
+
+# VSCode Extensions
+.vscode
+.history
