@@ -1,0 +1,15 @@
+{
+  "tags": {
+    "SampleCopy": [
+      "textures/objects/SampleCopy/samplecopy_barrel.png",
+      "textures/objects/SampleCopy/samplecopy_cauldron.png",
+      "textures/objects/SampleCopy/SubSampleCopy/subsamplecopy_barrel.png",
+      "textures/objects/SampleCopy/SubSampleCopy/subsamplecopy_cauldron.png"
+    ],
+    "SubSampleCopy": [
+      "textures/objects/SampleCopy/SubSampleCopy/subsamplecopy_barrel.png",
+      "textures/objects/SampleCopy/SubSampleCopy/subsamplecopy_cauldron.png"
+    ]
+  },
+  "sets": { "SampleCopy Set": ["SampleCopy", "SubSampleCopy"] }
+}
