@@ -97,6 +97,7 @@ async function buildObjectTags(startingDirPath, startingDirName) {
 }
 
 function main() {
+  // TODO: This should be based on directory structure and pulled in automatically
   const packages = [
     {
       dirPath: "example",
