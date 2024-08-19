@@ -98,9 +98,10 @@ async function buildObjectTags(startingDirPath, startingDirName) {
 
 function main() {
   // TODO: This should be based on directory structure and pulled in automatically
+  // based on whether the directory has "_pack" at the end of the name
   const packages = [
     {
-      dirPath: "example",
+      dirPath: "example_pack",
       dirName: "Sample",
     },
   ];
