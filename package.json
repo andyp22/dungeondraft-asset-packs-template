@@ -10,7 +10,7 @@
     "build:webpack": "webpack",
     "build:production": "webpack --mode production --env mode=production",
     "build:tagger": "node dd_object_tagger.js",
-    "prettier": "prettier \"**/*.{js,json,md,ts,dungeondraft_tags}\" --write --list-different --no-error-on-unmatched-pattern",
+    "prettier": "prettier \"**/*.{json,md,ts,dungeondraft_tags}\" --write --list-different --no-error-on-unmatched-pattern",
     "start": "webpack serve --hot"
   },
   "author": "",
