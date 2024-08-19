@@ -6,8 +6,8 @@ interface TagsData {
   fullList: string[];
 }
 
-const dataObj = {};
-const fullList: string[] = [];
+let dataObj = {};
+let fullList: string[] = [];
 
 const walkDirectory = async function (
   dir,
@@ -92,10 +92,12 @@ async function buildObjectTags(startingDirPath, startingDirName) {
     JSON.stringify(JSON.parse(JSON.stringify(fileData))),
   );
 
-  console.log("Completed building pack tag data for: ", startingDirName);
+  return new Promise<string>((resolve) => {
+    resolve(`Completed building pack tag data for: ${startingDirName}`);
+  });
 }
 
-function main() {
+async function main() {
   // TODO: This should be based on directory structure and pulled in automatically
   // based on whether the directory has "_pack" at the end of the name
   const packages = [
@@ -103,12 +105,24 @@ function main() {
       dirPath: "example_pack",
       dirName: "Sample",
     },
+    {
+      dirPath: "example_copy_pack",
+      dirName: "SampleCopy",
+    },
   ];
 
-  packages.forEach((pack) => {
+  for (let i = 0; i < packages.length; i++) {
+    const pack = packages[i];
+
+    console.group("--- New package ---");
     console.log("Building pack tag data: ", pack.dirName);
-    buildObjectTags(pack.dirPath, pack.dirName);
-  });
+    console.log(await buildObjectTags(pack.dirPath, pack.dirName));
+    console.groupEnd();
+    console.log("\n");
+
+    dataObj = {};
+    fullList = [];
+  }
 }
 
 main();
